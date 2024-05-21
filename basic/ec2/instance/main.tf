@@ -3,14 +3,14 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "5.50.0"
     }
   }
 }
 
 provider "aws" {
-    region = "us-west-1"
+  region = "us-west-1"
 }
 
 resource "aws_instance" "this" {

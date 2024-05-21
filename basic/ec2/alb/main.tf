@@ -3,7 +3,7 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "5.50.0"
     }
   }
@@ -14,6 +14,6 @@ provider "aws" {
 }
 
 resource "aws_lb" "this" {
-  subnets         = ["subnet-7cb82225", "subnet-a47752c1"]
+  subnets = ["subnet-7cb82225", "subnet-a47752c1"]
 }
 
