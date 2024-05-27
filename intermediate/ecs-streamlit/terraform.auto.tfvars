@@ -1,5 +1,5 @@
 # Global
-account_num = "992382604142"
+account_num = "123456789"
 assume_role_name = "OrganizationAccountAccessRole"
 region = "us-west-1"
 
@@ -16,7 +16,7 @@ assign_public_ip = true
 
 # Task Definition
 task_family = "streamlit-task-definition"
-task_execution_role_arn = "arn:aws:iam::992382604142:role/ecsTaskExecutionRole-TFManaged"
+task_execution_role_arn = "arn:aws:iam::123456789:role/ecsTaskExecutionRole-TFManaged"
 network_mode = "awsvpc"
 requires_compatibilities = ["FARGATE"]
 task_definition_cpu = "512"
@@ -28,7 +28,7 @@ runtime_platform = {
 container_definitions = [
   {
     name      = "streamlit"
-    image     = "public.ecr.aws/o1k1o9q5/streamlit-example:latest"
+    image     = "public.ecr.aws/o1a2b3c/streamlit-example:latest"
     cpu       = 256
     memory    = 1024
     essential = true
