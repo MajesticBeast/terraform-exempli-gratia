@@ -1,0 +1,62 @@
+{
+  "taskDefinitionArn": "arn:aws:ecs:us-west-1:347267726584:task-definition/streamlit:4",
+  "containerDefinitions": [
+    {
+      "name": "streamlit",
+      "image": "public.ecr.aws/o1k1o9q5/streamlit-example:latest",
+      "cpu": 256,
+      "memory": 1024,
+      "portMappings": [
+        {
+          "name": "HTTP",
+          "containerPort": 8501,
+          "hostPort": 80,
+          "protocol": "tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "essential": true,
+      "environment": [],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "readonlyRootFilesystem": true,
+      "ulimits": [],
+      "systemControls": []
+    }
+  ],
+  "family": "streamlit",
+  "executionRoleArn": "arn:aws:iam::347267726584:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "revision": 4,
+  "volumes": [],
+  "status": "ACTIVE",
+  "requiresAttributes": [
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "name": "ecs.capability.task-eni"
+    }
+  ],
+  "placementConstraints": [],
+  "compatibilities": [
+    "EC2",
+    "FARGATE"
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "512",
+  "memory": "2048",
+  "runtimePlatform": {
+    "cpuArchitecture": "ARM64",
+    "operatingSystemFamily": "LINUX"
+  },
+  "registeredAt": "2024-05-27T16:43:26.127Z",
+  "registeredBy": "arn:aws:sts::347267726584:assumed-role/AWSReservedSSO_AdministratorAccess_b1e7922278966645/majestic",
+  "tags": []
+}
