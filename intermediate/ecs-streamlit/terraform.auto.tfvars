@@ -28,7 +28,7 @@ runtime_platform = {
 container_definitions = [
   {
     name      = "streamlit"
-    image     = "public.ecr.aws/o1a2b3c/streamlit-example:latest"
+    image     = "public.ecr.aws/o1k1o9q5/streamlit-example:latest"
     cpu       = 256
     memory    = 1024
     essential = true
