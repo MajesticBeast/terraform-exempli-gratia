@@ -13,7 +13,11 @@ This module creates a basic AWS Landing Zone. Geared mostly towards solo devs an
 - test
 - qa
 - prod
-4. A single IAM Identity Center user who can assume  
+4. A single IAM Identity Center user who can assume the following roles in the given accounts:
+- Administrator
+- PowerUser
+- ViewOnly
+- Billing
 
 ## Prerequisites
 Due to some limitations of the AWS API, and the fact that you simply have to manually create a new account,
