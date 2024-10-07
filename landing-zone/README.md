@@ -29,7 +29,7 @@ there are some prerequisites that you need to have in place before you can use t
 process.
 1. You must create a brand new AWS account. This has not been tested with existing accounts.
 2. Set up MFA on your root user immediately after creating the account.
-3. Create a new user with admin permissions and enable MFA, only programmatic access is needed.
+3. Create a new IAM user with admin permissions and enable MFA, only programmatic access is needed.
 4. Generate an access key for the new user, this will generate an `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 5. In your terminal, export those two values as the following environment variables.
 
@@ -50,9 +50,18 @@ through the API. As above, you should/must manually enable MFA on the users crea
 3. Run `terraform init` to initialize the resources.
 4. Run `terraform apply` to create the resources.
 
-After that `apply` is finished, you must log into the AWS console and enable Identity Center in the master account.
+After that `apply` is finished, you must log into the AWS console and enable Identity Center in the master account. Then...
 
 5. Uncomment the `identity_center.tf` file.
 6. Run `terraform init` to initialize the resources.
 7. Run `terraform apply` to create the resources.
 8. After that `apply` is finished, you should have a fully functional AWS Landing Zone.
+---
+## Post Deployment
+Now that you have your Identity Center user created, you can delete the previously created IAM user by logging into your
+master account as the root user. While still in the console, navigate back to the Identity Center and set your custom login URL. It
+should be in a column on the right hand side. Once this is set, you can log out and log back in using your new Identity
+Center URL as your Identity Center user. You'll have to click "Forgot Password" to create the password, then you'll be
+prompted to setup MFA.
+
+**Note:** Make sure you're in the same region you specified in your `terraform.auto.tfvars` file.
