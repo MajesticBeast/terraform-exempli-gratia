@@ -1,8 +1,8 @@
-# How to use
+# AWS Landing Zone
 ---
 
 ## Overview
-![img_1.png](img_1.png)
+![img.png](img.png)
 This module creates a basic AWS Landing Zone. Geared mostly towards solo devs and small teams, this module creates:
 1. AWS Organization
 2. 2 Organizational Units (OU)
@@ -18,6 +18,10 @@ This module creates a basic AWS Landing Zone. Geared mostly towards solo devs an
 - PowerUser
 - ViewOnly
 - Billing
+5. A Budget with 2 notification thresholds:
+- Forecasted spend is > 100% of monthly budget
+- Actual spend is > 100% of monthly budget
+6. An SCP that denies creation of large EC2 and RDS instances. It's a skeleton implementation and can be customized as needed.
 
 ## Prerequisites
 Due to some limitations of the AWS API, and the fact that you simply have to manually create a new account,
