@@ -1,5 +1,4 @@
 # AWS Landing Zone
----
 
 ## Overview
 ![img.png](img.png)
