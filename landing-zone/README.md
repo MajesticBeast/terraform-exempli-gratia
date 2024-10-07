@@ -5,7 +5,7 @@
 ![img.png](img.png)
 This module creates a basic AWS Landing Zone. Geared mostly towards solo devs and small teams, this module creates:
 1. AWS Organization
-2. 2 Organizational Units (OU)
+2. Organizational Units (OU)
 - nonprod
 - prod
 3. 4 AWS accounts
