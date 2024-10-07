@@ -8,7 +8,7 @@ This module creates a basic AWS Landing Zone. Geared mostly towards solo devs an
 2. Organizational Units (OU)
 - nonprod
 - prod
-3. 4 AWS accounts
+3. AWS accounts
 - dev
 - test
 - qa
